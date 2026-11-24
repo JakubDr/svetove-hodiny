@@ -1,0 +1,19 @@
+{
+  "name": "svetove-hodiny",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Single page world clock dashboard showing the time of our server and selected cities.",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node --watch server/index.js",
+    "check": "node --check server/index.js && node --check public/app.js && node --check test/api.test.js",
+    "test": "npm run check && node --test test/api.test.js",
+    "build": "docker compose build",
+    "up": "docker compose up -d",
+    "down": "docker compose down"
+  }
+}
